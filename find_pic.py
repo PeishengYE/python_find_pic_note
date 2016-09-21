@@ -14,6 +14,7 @@ class Gui:
         pixbuf = gtk.gdk.pixbuf_new_from_file(file_name)
         pixmap, mask = pixbuf.render_pixmap_and_mask()
         image = gtk.Image()
+        pixbuf = pixbuf.scale_simple(width, height, gtk.gdk.INTERP_BILINEAR)
         image.set_from_pixmap(pixmap, mask)
 
         # Create a window.
