@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import gtk
 import pygtk
 import os 
@@ -73,10 +74,10 @@ if __name__ == "__main__":
 
     sorted_time_stamp_list = sorted(time_stamp_list)
     length = len(sorted_time_stamp_list)
-    last_100_timestamp_list = sorted_time_stamp_list[length -100 -1 : length -1]
+    last_20_timestamp_list = sorted_time_stamp_list[length -20 -1 : length -1]
 
-    print ("======== 100 =========")
-    for each in last_100_timestamp_list:
+    print ("======== the last 20 files name =========")
+    for each in last_20_timestamp_list:
         filename_100 = file_map[each]
         modified_time = convert_timestamp(each)
         print (modified_time)
